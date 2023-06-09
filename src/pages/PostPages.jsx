@@ -12,6 +12,7 @@ const PostPages = () => {
   const navigate = useNavigate();
 
   const goBack = () => navigate(-1);
+  const goHome = () => navigate("/", { replace: true });
 
   const { id } = useParams();
 
@@ -22,6 +23,7 @@ const PostPages = () => {
   return (
     <div>
       <button onClick={goBack}>Go back</button>
+      <button onClick={goHome}>Go home</button>
       {post && (
         <div>
           <h1>{post.title}</h1>

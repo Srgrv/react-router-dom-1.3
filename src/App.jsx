@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 //styles
 import "./styles/App.css";
@@ -20,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="about-us" element={<Navigate to="/about" replace />} />
           <Route path="posts" element={<PostsPages />} />
           <Route path="posts/:id" element={<PostPages />} />
         </Route>

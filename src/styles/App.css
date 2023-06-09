@@ -1,0 +1,8 @@
+input:checked + span {
+  text-decoration: line-through;
+}
+
+.active {
+  color: red;
+  font-weight: 900;
+}
